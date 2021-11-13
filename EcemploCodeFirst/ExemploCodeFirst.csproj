@@ -55,7 +55,22 @@
   <ItemGroup>
     <Compile Include="Controler\JogoControler.cs" />
     <Compile Include="Dto\JogoDto.cs" />
+    <Compile Include="Migrations\202111131233551_InitialCreate.cs" />
+    <Compile Include="Migrations\202111131233551_InitialCreate.designer.cs">
+      <DependentUpon>202111131233551_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111131252288_AtualizarParaIngles.cs" />
+    <Compile Include="Migrations\202111131252288_AtualizarParaIngles.designer.cs">
+      <DependentUpon>202111131252288_AtualizarParaIngles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111131838006_CampoCategoria.cs" />
+    <Compile Include="Migrations\202111131838006_CampoCategoria.designer.cs">
+      <DependentUpon>202111131838006_CampoCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Categoria.cs" />
     <Compile Include="Model\Jogo.cs" />
+    <Compile Include="Model\JogoDeConsole.cs" />
     <Compile Include="Model\Plataforma.cs" />
     <Compile Include="Model\PlataformaDBContext.cs" />
     <Compile Include="Program.cs" />
@@ -64,6 +79,17 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202111131233551_InitialCreate.resx">
+      <DependentUpon>202111131233551_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111131252288_AtualizarParaIngles.resx">
+      <DependentUpon>202111131252288_AtualizarParaIngles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111131838006_CampoCategoria.resx">
+      <DependentUpon>202111131838006_CampoCategoria.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

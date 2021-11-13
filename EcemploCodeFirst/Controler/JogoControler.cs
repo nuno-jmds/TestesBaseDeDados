@@ -1,17 +1,17 @@
-﻿using EcemploCodeFirst.Dto;
-using EcemploCodeFirst.Model;
+﻿using ExemploCodeFirst.Dto;
+using ExemploCodeFirst.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EcemploCodeFirst.Controler
+namespace ExemploCodeFirst.Controler
 {
     public class JogoControler
     {
         //CRUD
-        public Jogo ObterJogoPorId(int id)
+        public Jogo ObterJogoPorId(Guid id)
         {
             var dbContext = new PlataformaDBContext();
 
@@ -44,12 +44,23 @@ namespace EcemploCodeFirst.Controler
 
         }
 
-        public void AtualizarJogo(int id, JogoDto jogoDto)
+        public void ApagarJogoPorId(Guid id)
+        {
+            var dbContext = new PlataformaDBContext();
+            var jogo= dbContext.Jogos.FirstOrDefault(x => x.Id == id);
+            dbContext.Jogos.Remove(jogo);
+            dbContext.SaveChanges();
+
+
+        }
+
+        public void AtualizarJogo(Guid id, JogoDto jogoDto)
         {
             var dbContext = new PlataformaDBContext();
             var jogo= dbContext.Jogos.FirstOrDefault(x => x.Id == id);
             jogo.Nome = jogoDto.Nome;
-            jogo.TipoJogo = jogoDto.TipoJogo;
+            var categoria = dbContext.Categorias.FirstOrDefault(x => x.Nome == jogoDto.Categoria);
+            jogo.Categoria = categoria;
             dbContext.SaveChanges();
         }
 

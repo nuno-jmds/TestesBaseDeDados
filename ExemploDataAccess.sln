@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31727.386
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExemploDAFirst", "ExemploDAFirst\ExemploDAFirst.csproj", "{30A775EF-56EC-47F9-B4F6-9485BD4DC4B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcemploCodeFirst", "EcemploCodeFirst\EcemploCodeFirst.csproj", "{1F4437A2-CE9B-49EE-8BAA-ED69FDF5CC02}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExemploCodeFirst", "EcemploCodeFirst\ExemploCodeFirst.csproj", "{1F4437A2-CE9B-49EE-8BAA-ED69FDF5CC02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
